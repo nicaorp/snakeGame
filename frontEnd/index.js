@@ -4,6 +4,7 @@ const FOOD_COLOUR = '#e66916';
 
 const socket = io('https://powerful-hollows-37907.herokuapp.com/');
 
+
 socket.on('init', handleInit);
 socket.on('gameState', handleGameState);
 socket.on('gameOver', handleGameOver);
@@ -121,7 +122,7 @@ function handleUnknownGame() {
     alert('Unknown Game Code')
 }
 
-function tooManyPlayers() {
+function handleTooManyPlayers() {
     reset();
     alert("This game is already in progress")
 }
